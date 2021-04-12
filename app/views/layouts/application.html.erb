@@ -11,6 +11,12 @@
   </head>
 
   <body>
-    <%= yield %>
+
+    <% cache do %>
+      <div class="<%= @page %>-page">
+        <%= yield %>
+      </div>
+    <% end %>
+
   </body>
 </html>
