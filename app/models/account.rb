@@ -4,5 +4,11 @@ class Account < ApplicationRecord
 
   devise :database_authenticatable, :registerable,
   :recoverable, :rememberable, :validatable
-  
+
+  mount_uploader :avatar, AvatarUploader
+
+  def full_name
+    "#{first_name} #{last_name}"
+  end
+
 end

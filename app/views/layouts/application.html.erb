@@ -14,8 +14,10 @@
 
     <% cache do %>
       <div class="<%= @page %>-page">
+        <%= render 'layouts/nav' %>
+
         <%= toastr_flash %>
-        
+
         <%= yield %>
       </div>
     <% end %>
